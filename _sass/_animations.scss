@@ -1,0 +1,47 @@
+@keyframes fade {
+    0%, 100% {
+      background-color: #b8f8ec;
+    }
+    10% {
+      background-color: #B8DDF8;
+    }
+    15% {
+      background-color: #E6B8F8;
+    }
+    25% {
+      background-color: #F8B8CA;
+    }
+    50% {
+      background-color: #F8B8B8;
+    }
+    65% {
+      background-color: #F8E6B8;
+    }
+    85% {
+      background-color: #D5F8B8;
+    }
+}
+
+@-webkit-keyframes fade {
+    0%, 100% {
+      background-color: #b8f8ec;
+    }
+    10% {
+      background-color: #B8DDF8;
+    }
+    15% {
+      background-color: #E6B8F8;
+    }
+    25% {
+      background-color: #F8B8CA;
+    }
+    50% {
+      background-color: #F8B8B8;
+    }
+    65% {
+      background-color: #F8E6B8;
+    }
+    85% {
+      background-color: #D5F8B8;
+    }
+}

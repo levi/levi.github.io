@@ -1,0 +1,264 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import "animations";
+
+body {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  font: normal 1em/1.38 ManifoldCF-Regular;
+  color: #313131;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ManifoldCF-Bold;
+  color: #515151;
+  text-transform: uppercase;
+  text-shadow:
+    1px 0 0 #4F48D4,
+    2px 0 1px #43BED3,
+    -1px 0px 0px rgba(#E14858, 0.64),
+    -2px 0px 1px rgba(#E1C851, 1.0);
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.tile-row {
+  margin-bottom: 10px;
+
+  .col-md-6:first-child {
+    padding: 0 5px 0 0;
+  }
+
+  .col-md-6:last-child {
+    padding: 0 0 0 5px;
+  }
+}
+
+.work-tile {
+  display: block;
+  position: relative;
+  height: 300px;
+  text-align: center;
+  text-decoration: none;
+
+  .title-container {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+
+  .title {
+    padding: 0 10px 2px 10px;
+    color: white;
+    background-color: rgba(black, 0.7);
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: ManifoldCF-Regular;
+    text-shadow: 1px 0 0 rgba(#4F48D4, 0.6),
+                 2px 0 1px rgba(#43BED3, 0.6),
+                 -1px 0px 0px rgba(#E14858, 0.44),
+                 -2px 0px 1px rgba(#E1C851, 0.4);
+  }
+}
+
+.feature-image {
+  position: absolute;
+  display: block;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  height: 220px;
+  bottom: 0;
+
+  &.website {
+    padding-top: 28px;
+    background: rgba(white, 0.9);
+
+    .shadow {
+      display: block;
+      position: absolute;
+      width: 5px;
+      top: -10px;
+      bottom: 0;
+      background-color: rgba(black, 0.13);
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: -5px;
+        left: 0;
+      }
+
+      &.shadow-left {
+        left: -5px;
+
+        &:before {
+          background: url("../images/browser_shadow_l.svg") no-repeat;
+        }
+      }
+
+      &.shadow-right {
+        right: -5px;
+
+        &:before {
+          background: url("../images/browser_shadow_r.svg") no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.browser-bar {
+  display: block;
+  position: absolute;
+  top: -28px;
+  left: 5px;
+  right: 5px;
+  height: 28px;
+  background: #f1f1f1;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+  }
+
+  &:before {
+    background: url("../images/browser_bar_corner_l.svg") no-repeat;
+    left: -5px;
+  }
+
+  &:after {
+    background: url("../images/browser_bar_corner_r.svg") no-repeat;
+    right: -5px;
+  }
+}
+
+.browser-buttons {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  top: 9px;
+  right: 10px;
+  background: url("../images/browser_buttons.svg") no-repeat;
+}
+
+.aqua {
+  background-color: #a2cdbd;
+}
+
+.blue {
+  background-color: #9bd4d7;
+}
+
+.green {
+  background-color: #c7d791;
+}
+
+.orange {
+  background-color: #e1a387;
+}
+
+.red {
+  background-color: #cd8795;
+}
+
+.yellow {
+  background-color: #e1c087;
+}
+
+/** Hero **/
+
+#hero-video {
+  position: absolute;
+  opacity: 0.1;
+  top: 10px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+}
+
+#hero-noise {
+  position: absolute;
+  opacity: 0.05;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 580px;
+  background: url('../images/static_bg.gif') repeat top left;
+}
+
+#hero {
+  height: 580px;
+  text-align: center;
+  background-size: cover;
+  animation: fade 50s ease-in-out infinite;
+  -webkit-animation: fade 50s ease-in-out infinite;
+}
+
+#hero .name {
+  padding-top: 240px;
+  font-family: ManifoldCF-Bold;
+  text-transform: uppercase;
+
+  h1, h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 72px;
+    overflow: hidden;
+    color: #515151;
+    text-shadow:
+      1px 0 0 #4F48D4,
+      2px 0 1px #43BED3,
+      -1px 0px 0px rgba(#E14858, 0.64),
+      -2px 0px 1px #E1C851;
+  }
+
+  .fourth {
+    opacity: 0.2;
+    height: 40px;
+  }
+
+  .third {
+    opacity: 0.3;
+    height: 47px;
+  }
+
+  .second {
+    opacity: 0.6;
+    height: 55px;
+  }
+
+  .first {}
+
+}
+
+#hero .subtitle {
+  font-size: 12px;
+  color: white;
+}

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<div id="work" class="row">
+  <h2>Recent Work</h2>
+</div>
+
+{% for post in site.posts %}
+  {% capture final_index %}{{ forloop.length | minus: 1 }}{% endcapture %}
+  {% capture current_cycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  {% if current_cycle == "odd" %}
+    <div class="row tile-row">
+  {% endif %}
+
+  <div class="col-md-6">
+    <a href="{{ post.url | prepend: site.baseurl }}" class="work-tile {{ post.color }}">
+      <span class="feature-image {{ post.type }}">
+        {% if post.type == "website" %}
+          <span class="browser-bar">
+            <span class="browser-buttons"></span>
+          </span>
+          <div class="shadow shadow-left"></div>
+          <div class="shadow shadow-right"></div>
+        {% endif %}
+      </span>
+      <span class="title-container">
+        <strong class="title">{{ post.title }}</strong>
+      </span>
+    </a>
+  </div>
+
+  {% if current_cycle == "even" or forloop.index == final_index %}
+    </div>
+  {% endif %}
+{% endfor %}
