@@ -89,8 +89,11 @@ a {
   height: 220px;
   bottom: 0;
 
+  .preview {
+    display: block;
+  }
+
   &.website {
-    padding-top: 28px;
     background: rgba(white, 0.9);
 
     .shadow {
