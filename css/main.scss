@@ -207,6 +207,11 @@ a {
       border-top-right-radius: 3px;
     }
   }
+
+  &.ipad {
+    width: 500px;
+    height: 253px;
+  }
 }
 
 .browser-bar {
@@ -348,5 +353,32 @@ a {
              2px 0 1px rgba(#43BED3, 0.5),
              -1px 0px 0px rgba(#E14858, 0.44),
              -2px 0px 1px rgba(#E1C851, 0.4);
+  }
+}
+
+.snapshots {
+  img {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.writeup {
+  .title {
+    margin-bottom: 15px;
+    padding: 2px 10px 5px;
+  }
+
+  .roles {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: block;
+    color: #777;
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 26px;
   }
 }

@@ -23,7 +23,7 @@ layout: default
           <div class="shadow shadow-left"></div>
           <div class="shadow shadow-right"></div>
         {% endif %}
-        <img src="{{ site.baseurl }}/images/work/{{ post.image }}" alt="{{ post.title }} Image" class="preview">
+        <img src="{{ site.baseurl }}/images/work/{{ post.image }}.png" srcset="{{ site.baseurl }}/images/work/{{ post.image }}.png, {{ site.baseurl }}/images/work/{{ post.image }}@2x.png 2x" alt="{{ post.title }} Image" class="preview">
       </span>
       <span class="title-container">
         <strong class="title">{{ post.title }}</strong>

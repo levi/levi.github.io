@@ -4,12 +4,14 @@ layout: default
 {% include navigation.html %}
 
 <div class="row">
-  <div class="col-md-7">
+  <div class="col-md-7 snapshots">
     {{ content }}
   </div>
-  <div class="col-md-5">
-    <h1 class="post-title subtitle">{{ page.title }}</h1>
-    <p>{{ page.roles | array_to_sentence_string }}</p>
-    {{ page.description | markdownify }}
-  </div>
+  <article class="col-md-5 writeup">
+    <h1 class="title subtitle">{{ page.title }}</h1>
+    <em class="roles">{{ page.roles | array_to_sentence_string }}</em>
+    <section class="content">
+      {{ page.description | markdownify }}
+    </section>
+  </article>
 </div>
