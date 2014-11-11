@@ -14,3 +14,17 @@ linkedin_username:  levimccallum
 
 # Build settings
 markdown: kramdown
+  
+sass:
+    sass_dir: _scss
+        style: :compressed
+  
+gems:
+  - jemoji
+  - jekyll-sitemap  
+    
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
