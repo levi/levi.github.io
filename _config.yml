@@ -14,15 +14,14 @@ linkedin_username:  levimccallum
 
 # Build settings
 markdown: kramdown
-  
+
 sass:
-    sass_dir: _scss
-        style: :compressed
-  
+  style: :compressed
+
 gems:
   - jemoji
-  - jekyll-sitemap  
-    
+  - jekyll-sitemap
+
 exclude:
   - Gemfile
   - Gemfile.lock
