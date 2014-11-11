@@ -6,23 +6,26 @@ categories: work
 color: green
 type: website
 image: creativemarket.png
+roles: [ 'Senior Engineer', 'Founding Team Member' ]
+description: >
+  <p>I joined <a href="https://creativemarket.com" title="Creative Market">Creative Market</a> as a full-stack engineer when a friend reached out to me about the idea he was working on with his co-founders. They wanted to create marketplace that allowed buyers to find high-quality design assets from talented designers around the web.</p>
+
+  <p>With a nimble team of 3 engineers, we built Creative Market from the ground up to scale to over 1 million weekly page views. My primary focus was to build out a strong vision for the rich client-side application experience that would craft the user-facing aspects of the marketplace. Wearing many hats (stylish, I might add), I endeavored upon:</p>
+
+  <ul>
+    <li>Building a scalable API-server that handled a high volume of purchases</li>
+    <li>Working with UI designers to architect and implement rich client-side experiences such as product browsing, purchasing, and seller item management.</li>
+    <li>Architecting a robust client-side JS framework that supported the collaboration of 8+ engineers</li>
+    <li>Establishing technical process, including project management methodologies, deployment practices, and hiring/onboarding experiences.</li>
+  </ul>
+
+  <p>Post launch, I was responsible for architecting consumer-facing features that drove sales and user acquisition, closely tracking KPIs to determine effective ways to design and develop meaningful experiences. Some of the most impactful things we created were weekly free item sales, Facebook login integration, and core SEO optimization which helped the company grow 17x to $1 million in sales in its first year.</p>
+
+  <p>In late 2013, a year after launch, Creative Market was acquired by AutoDesk.</p>
+
+  <p>Creative Market is built with many technologies, like Backbone, Requirejs, Node.js, PHP, MySQL, Memcached, Sphinx, C and Python.</p>
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+<div class="container-fluid">
+  <div class="row">
+  </div>
+</div>

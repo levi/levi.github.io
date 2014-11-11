@@ -4,9 +4,7 @@ layout: default
 
 {% include hero.html %}
 
-<div id="work" class="row">
-  <h2>Recent Work</h2>
-</div>
+{% include navigation.html %}
 
 {% for post in site.posts %}
   {% capture final_index %}{{ forloop.length | minus: 1 }}{% endcapture %}
