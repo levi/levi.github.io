@@ -324,16 +324,22 @@ a {
     .fourth {
       opacity: 0.2;
       height: 40px;
+      // animation: wobble-third 8s ease-in infinite;
+      // -webkit-animation: wobble-third 8s ease-in infinite;
     }
 
     .third {
       opacity: 0.3;
       height: 47px;
+      // animation: wobble-second 7.5s ease-in infinite;
+      // -webkit-animation: wobble-second 7.5s ease-in infinite;
     }
 
     .second {
       opacity: 0.6;
       height: 55px;
+      // animation: wobble-first 7s ease-in infinite;
+      // -webkit-animation: wobble-first 7s ease-in infinite;
     }
 
     .first {}
@@ -381,4 +387,9 @@ a {
     font-size: 16px;
     line-height: 26px;
   }
+}
+
+#footer {
+  padding: 20px 0;
+  font-size: 14px;
 }
