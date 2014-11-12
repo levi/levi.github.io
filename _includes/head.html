@@ -9,7 +9,14 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }} by {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-    <meta property="og:image" content="{% if page.image %}{{ site.url }}/images/{{ page.image }}/{{ page.image }}_1.jpg{% else %}{{ site.url }}/images/levi.jpg{% endif %}" />
+    <meta property="og:image" content="{% if page.image %}{{ site.url }}/images/{{ page.image }}/{{ page.image }}_1.jpg{% else %}{{ site.url }}/images/levi_fb.jpg{% endif %}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@levi">
+    <meta name="twitter:creator" content="@levi">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} by {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image:src" content="{% if page.image %}{{ site.url }}/images/{{ page.image }}/{{ page.image }}_1.jpg{% else %}{{ site.url }}/images/levi_fb.jpg{% endif %}">
 
     <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
