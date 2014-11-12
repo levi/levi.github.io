@@ -5,20 +5,50 @@
 
 @import "animations";
 
-body {
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
-  font: normal 1em/1.38 ManifoldCF-Regular;
-  color: #313131;
+@font-face {
+    font-family: 'manifold_cfbold';
+    src: url('/fonts/manifoldcf-bold-webfont.eot');
+    src: url('/fonts/manifoldcf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/manifoldcf-bold-webfont.woff2') format('woff2'),
+         url('/fonts/manifoldcf-bold-webfont.woff') format('woff'),
+         url('/fonts/manifoldcf-bold-webfont.ttf') format('truetype'),
+         url('/fonts/manifoldcf-bold-webfont.svg#manifold_cfbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body.sticky-nav {
-  padding-top: 80px;
+@font-face {
+    font-family: 'manifold_cfregular';
+    src: url('/fonts/manifoldcf-regular-webfont.eot');
+    src: url('/fonts/manifoldcf-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/manifoldcf-regular-webfont.woff2') format('woff2'),
+         url('/fonts/manifoldcf-regular-webfont.woff') format('woff'),
+         url('/fonts/manifoldcf-regular-webfont.ttf') format('truetype'),
+         url('/fonts/manifoldcf-regular-webfont.svg#manifold_cfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font: normal 1em/1.38 "manifold_cfregular", sans-serif;
+  color: #313131;
+
+  @media (min-width: 992px) {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  body.sticky-nav {
+    padding-top: 80px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: ManifoldCF-Bold;
+  font-family: "manifold_cfbold", sans-serif;
   color: #515151;
   text-transform: uppercase;
   text-shadow:
@@ -32,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: ManifoldCF-Regular;
+    font-family: "manifold_cfregular", sans-serif;
     text-shadow: 1px 0 0 rgba(#4F48D4, 0.6),
                  2px 0 1px rgba(#43BED3, 0.5),
                  -1px 0px 0px rgba(#E14858, 0.44),
@@ -46,30 +76,46 @@ a {
 
   &:hover {
     text-decoration: none;
+    color: inherit;
   }
 }
 
 .navigation {
   background: white;
   position: relative;
-  padding: 20px 0 (20px - 3px);
+  padding: 10px 0 (10px - 3px);
+
+  @media (min-width: 992px) {
+    padding: 20px 0 (20px - 3px);
+  }
 
   &.sticky {
-    padding-left: 20px;
-    padding-right: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    z-index: 1;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    margin-bottom: 20px;
+
+    @media (min-width: 992px) {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin: 0;
+      height: 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
 
     .nav-border {
       opacity: 1;
     }
 
     .logo {
-      opacity: 1;
+      display: block;
+
+      @media (min-width: 992px) {
+        opacity: 1;
+      }
     }
   }
 
@@ -92,34 +138,67 @@ a {
       border-radius: 0;
       padding: 0;
       font-size: 16px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        color: inherit;
+        background-color: transparent;
+      }
+
+      &.active {
+        text-decoration: line-through;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
   .logo {
-    margin: 0;
-    text-align: right;
-    opacity: 0;
+    display: none;
+    margin: 0 0 10px 0;
+    text-align: left;
+
+    @media (min-width: 992px) {
+      display: block;
+      opacity: 0;
+      margin-top: -5px;
+      margin-bottom: 0;
+      text-align: right;
+    }
   }
 }
 
 .tile-row {
-  margin-bottom: 10px;
+  @media (min-width: 992px) {
+    margin-bottom: 10px;
 
-  .col-md-6:first-child {
-    padding: 0 5px 0 0;
-  }
+    .col-md-6:first-child {
+      padding: 0 5px 0 0;
+    }
 
-  .col-md-6:last-child {
-    padding: 0 0 0 5px;
+    .col-md-6:last-child {
+      padding: 0 0 0 5px;
+    }
   }
 }
 
 .work-tile {
   display: block;
   position: relative;
-  height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 180px;
   text-align: center;
   text-decoration: none;
+
+  @media (min-width: 992px) {
+    margin: 0;
+    height: 300px;
+  }
 
   .title-container {
     position: absolute;
@@ -129,41 +208,50 @@ a {
   }
 
   .title {
-    padding: 0 10px 2px 10px;
+    padding: 2px 10px 0 10px;
     color: white;
-    font-size: 29px;
+    font-size: 22px;
     background-color: rgba(black, 0.9);
     text-transform: uppercase;
     font-weight: normal;
-    font-family: ManifoldCF-Regular;
+    font-family: "manifold_cfregular", sans-serif;
     text-shadow: 1px 0 0 rgba(#4F48D4, 0.6),
                  2px 0 1px rgba(#43BED3, 0.5),
                  -1px 0px 0px rgba(#E14858, 0.44),
                  -2px 0px 1px rgba(#E1C851, 0.4);
+
+    @media (min-width: 992px) {
+      font-size: 29px;
+      padding: 2px 10px 0 10px;
+    }
   }
 }
 
 .feature-image {
-  position: absolute;
   display: block;
-  width: 500px;
-  left: 50%;
-  margin-left: -250px;
-  height: 220px;
-  bottom: 0;
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
 
   .preview {
     display: block;
+    width: 100%;
   }
+}
 
-  &.website {
+.website {
+  padding-top: 80px;
+
+  .feature-image {
     background: rgba(white, 0.9);
+    height: 220px;
 
     .shadow {
       display: block;
       position: absolute;
       width: 5px;
-      top: -10px;
+      top: -15px;
       bottom: 0;
       background-color: rgba(black, 0.13);
 
@@ -194,29 +282,11 @@ a {
       }
     }
   }
-
-  &.mobile {
-    padding: 67px 19px 0;
-    background: url("../images/iphone_background.svg") no-repeat;
-    width: 333px;
-    height: 270px;
-    margin-left: -166.5px;
-
-    .preview {
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
-  }
-
-  &.ipad {
-    width: 500px;
-    height: 253px;
-  }
 }
 
 .browser-bar {
-  display: block;
   position: absolute;
+  display: block;
   top: -28px;
   left: 5px;
   right: 5px;
@@ -250,6 +320,41 @@ a {
   top: 9px;
   right: 10px;
   background: url("../images/browser_buttons.svg") no-repeat;
+}
+
+.mobile {
+  padding-top: 30px;
+
+  .feature-image {
+    padding: 67px 19px 0;
+    background: url("../images/iphone_background.svg") no-repeat;
+    background-size: 100%;
+    max-width: 333px;
+    height: 270px;
+
+    .preview {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+}
+
+.ipad {
+  padding-top: 55px;
+
+  @media (min-width: 992px) {
+    padding-top: 47px;
+  }
+
+  .feature-image {
+    max-width: 250px;
+    height: 126px;
+
+    @media (min-width: 992px) {
+      max-width: 500px;
+      height: 253px;
+    }
+  }
 }
 
 .aqua {
@@ -298,48 +403,94 @@ a {
 }
 
 #hero {
-  height: 580px;
+  height: 460px;
   text-align: center;
   animation: fade 50s ease-in-out infinite;
   -webkit-animation: fade 50s ease-in-out infinite;
 
+  @media (min-width: 992px) {
+    height: 580px;
+  }
+
+  &.nav-active {
+    @media (min-width: 992px) {
+      margin-bottom: 70px;
+    }
+  }
+
   .name {
-    padding-top: 240px;
-    font-family: ManifoldCF-Bold;
+    padding-top: 140px;
+    font-family: "manifold_cfbold", sans-serif;
     text-transform: uppercase;
+
+    @media (min-width: 992px) {
+      padding-top: 240px;
+    }
 
     h1, h2 {
       padding: 0;
       margin: 0;
-      font-size: 72px;
       overflow: hidden;
       color: #515151;
+      font-size: 36px;
       text-shadow:
         1px 0 0 #4F48D4,
         2px 0 1px #43BED3,
         -1px 0px 0px rgba(#E14858, 0.64),
         -2px 0px 1px #E1C851;
+
+      @media (min-width: 992px) {
+        font-size: 54px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 72px;
+      }
     }
 
     .fourth {
       opacity: 0.2;
-      height: 40px;
+      height: 20px;
       // animation: wobble-third 8s ease-in infinite;
       // -webkit-animation: wobble-third 8s ease-in infinite;
+
+      @media (min-width: 992px) {
+        height: 30px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 40px;
+      }
     }
 
     .third {
       opacity: 0.3;
-      height: 47px;
+      height: 23.5px;
       // animation: wobble-second 7.5s ease-in infinite;
       // -webkit-animation: wobble-second 7.5s ease-in infinite;
+
+      @media (min-width: 992px) {
+        height: 35px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 47px;
+      }
     }
 
     .second {
       opacity: 0.6;
-      height: 55px;
+      height: 27.5px;
       // animation: wobble-first 7s ease-in infinite;
       // -webkit-animation: wobble-first 7s ease-in infinite;
+
+      @media (min-width: 992px) {
+        height: 41px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 55px;
+      }
     }
 
     .first {}
@@ -347,18 +498,23 @@ a {
   }
 
   .subtitle {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 5px 10px;
     display: inline-block;
     // font-family: ManifoldCF-Regular;
     // font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     background: rgba(black, 0.9);
     text-shadow: 1px 0 0 rgba(#4F48D4, 0.6),
              2px 0 1px rgba(#43BED3, 0.5),
              -1px 0px 0px rgba(#E14858, 0.44),
              -2px 0px 1px rgba(#E1C851, 0.4);
+
+    @media (min-width: 992px) {
+      margin-top: 40px;
+      font-size: 18px;
+    }
   }
 }
 
@@ -372,8 +528,12 @@ a {
 
 .writeup {
   .title {
+    padding: 5px 10px 0;
     margin-bottom: 15px;
-    padding: 2px 10px 5px;
+
+    @media (min-width: 992px) {
+      padding: 5px 10px 0;
+    }
   }
 
   .roles {

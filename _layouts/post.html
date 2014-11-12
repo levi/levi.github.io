@@ -1,17 +1,19 @@
 ---
 layout: default
+active: work
 ---
 {% include navigation.html %}
 
 <div class="row">
-  <div class="col-md-7 snapshots">
-    {{ content }}
-  </div>
-  <article class="col-md-5 writeup">
+  <article class="col-md-5 col-md-push-7 writeup">
     <h1 class="title subtitle">{{ page.title }}</h1>
     <em class="roles">{{ page.roles | array_to_sentence_string }}</em>
     <section class="content">
       {{ page.description | markdownify }}
     </section>
   </article>
+
+  <div class="col-md-7 col-md-pull-5 snapshots">
+    {{ content }}
+  </div>
 </div>

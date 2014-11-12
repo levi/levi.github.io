@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 {% include head.html %}
 
-<body {% if page.id %}class="sticky-nav"{% endif %}>
+<body {% if page.active %}class="sticky-nav"{% endif %}>
 
   <div class="container-fluid">
     {{ content }}

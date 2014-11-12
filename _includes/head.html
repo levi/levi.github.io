@@ -3,12 +3,16 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — {{ site.subtitle }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} by {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:image" content="{% if page.image %}{{ site.url }}/images/{{ page.image }}/{{ page.image }}_1.jpg{% else %}{{ site.url }}/images/levi.jpg{% endif %}" />
 
     <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <script src="{{ "/js/picturefill.min.js" | prepend: site.baseurl }}"></script>
 </head>

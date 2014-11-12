@@ -3,9 +3,7 @@ title: Levi McCallum
 subtitle: Consumer Application Developer
 email: levi@levimccallum.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The personal site of Levi McCallum, a California based consumer application developer for iOS and web apps.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://levi.so" # the base hostname & protocol for your site
 twitter_username: levi

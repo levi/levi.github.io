@@ -1,20 +1,20 @@
-<nav id="work" class="navigation row {% if page.id %}sticky{% endif %}" role="navigation">
+<nav id="work" class="navigation row {% if page.active %}sticky{% endif %}" role="navigation">
   <div class="nav-border"></div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-        <ul class="nav nav-pills" role="tablist">
-          <li role="presentation">
-            <a href="{{ site.baseurl }}/#work" title="The Work">The Work</a>
-          </li>
-          <li role="presentation">
-            <a href="{{ site.baseurl }}/about" title="The Man">The Man</a>
-          </li>
-        </ul>
+      <div class="col-md-6 col-md-push-6">
+        <h2 class="logo">{{ site.title }}.</h2>
       </div>
 
-      <div class="col-md-6">
-        <h2 class="logo">{{ site.title }}.</h2>
+      <div class="col-md-6 col-md-pull-6">
+        <ul class="nav nav-pills" role="tablist">
+          <li role="presentation">
+            <a href="{{ site.baseurl }}/#work" title="The Work" id="work-link">The Work</a>
+          </li>
+          <li role="presentation">
+            <a href="{{ site.baseurl }}/about" title="The Man"{% if page.active == "about" %}class="active"{% endif %}>The Man</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
