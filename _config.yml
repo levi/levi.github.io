@@ -13,6 +13,8 @@ linkedin_username:  levimccallum
 # Build settings
 markdown: kramdown
 
+permalink: /carefullymade/:title.html
+
 sass:
   style: :compressed
 
