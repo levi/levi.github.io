@@ -10,7 +10,7 @@ roles: [ 'Co-Founder', 'CTO' ]
 description: >
   <p><a href="https://glean.co" title="Glean">Glean</a> is an educational video platform I co-founded in 2013. Glean organizes thousands of K-12 video lessons from around the web by lesson content, teaching style, and education standards. Each lesson is enhanced with live Q&A and personalized lesson recommendations based upon teachers a student likes.</p>
 
-  <p>In addition, we introduced <a href="https://glean.co/insights" title="Glean Insights">Glean Insights</a>, an analytics tool for teachers to follow their student's learning progress and viewing behavior. Teachers using the platform can identify an entire class' engagement in real-time with a live progress bar. It seemlessly allows teachers to share a single link and gain deep insight into areas of interest or struggle on any given lesson.</p>
+  <p>In addition, we introduced <a href="https://glean.co/insights" title="Glean Insights">Glean Insights</a>, an analytics tool for teachers to follow their student's learning progress and viewing behavior. Teachers using the platform can identify an entire class' engagement in real-time with a live progress bar. By sharing a single link, teachers can seemlessly gain deeper insight into areas of interest or struggle for individual students.</p>
 
   <p>As technical co-founder and CTO, my main focus was owning the design, development, and communication of the product; and hiring/managing technical talent.</p>
 
