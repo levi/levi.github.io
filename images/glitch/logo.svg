@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2 (9961) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8EF5FF" offset="0%"></stop>
+            <stop stop-color="#62F1FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-192.000000, -92.000000)" fill="url(#linearGradient-1)">
+            <g id="Title" sketch:type="MSLayerGroup" transform="translate(187.000000, 73.000000)">
+                <path d="M15.3472739,22.5162201 L7.06000798,34.1301278 L26.5202094,61.2299297 L15.5127838,22.2662616 L16.4267112,21.0199142 L17.3096753,21.0392509 L29.0093416,62.6121982 L40.6885485,21.0593735 L41.5715126,21.0388578 L42.574097,22.4273215 L31.3909122,61.3549501 L50.939992,34.1301278 L41.5832826,21.0174849 L16.4167174,21.0174849 M28.1811368,67 L5.00100783,34.7202421 L5,33.5460659 L15.0783169,19.4226631 L15.8986919,19 L42.1023159,19 L42.9216831,19.4226631 L53,33.5460659 L52.9989922,34.7202421 L29.8188632,67 L28.1811368,67 Z" id="logo" sketch:type="MSShapeGroup" transform="translate(29.000000, 43.000000) rotate(-180.000000) translate(-29.000000, -43.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
