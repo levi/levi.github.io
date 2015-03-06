@@ -5,7 +5,7 @@ email: levi@levimccallum.com
 description: >
   The personal site of Levi McCallum, a California based consumer application developer for iOS and web apps.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://levi.so" # the base hostname & protocol for your site
+url: "http://levimccallum.com" # the base hostname & protocol for your site
 twitter_username: levi
 github_username:  levi
 linkedin_username:  levimccallum

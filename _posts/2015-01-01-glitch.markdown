@@ -6,7 +6,7 @@ categories: work
 color: purple
 type: mobile-landscape
 image: glitch
-permalink: http://levi.so/glitch
+permalink: http://levimccallum.com/glitch
 roles: [ 'Creator' ]
 description: >
   <p>Learn more about glitch</p>
