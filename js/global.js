@@ -28,7 +28,6 @@
 
   function setNavigationPosition(scrollY, elements) {
     var heroMaxY = elements.hero.getBoundingClientRect().bottom - 1;
-    console.log("Hero max y:", heroMaxY);
     if (heroMaxY < 0) {
       elements.nav.classList.add('sticky');
       elements.hero.classList.add('nav-active');

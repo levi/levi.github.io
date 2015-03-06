@@ -14,7 +14,7 @@ layout: default
   {% endif %}
 
   <div class="col-md-6">
-    <a href="{{ post.url | prepend: site.baseurl }}" class="work-tile {{ post.color }} {{ post.type }}">
+    <a href="{% if post.permalink %}{{ post.permalink }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" class="work-tile {{ post.color }} {{ post.type }}">
       <span class="feature-image">
         {% if post.type == "website" %}
           <span class="browser-bar">
